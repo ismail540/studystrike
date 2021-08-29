@@ -1,0 +1,464 @@
+/* ======================= GOOGLE FONTS =========================== */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
+:root {
+  font-size: 62.5%;
+  /* ======================= COLOR VARIABLES =========================== */
+  /* 220    142 */
+  --primary-color-1-hue: 220;
+  --primary-color-2-hue: 142;
+  --primary-color-1: hsl(var(--primary-color-1-hue), 100%, 19%);
+  --primary-color-2: hsl(var(--primary-color-2-hue), 59%, 60%);
+  --nav-color: hsl(153, 45%, 48%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+  user-select: none;
+}
+body {
+  font-family: "Comfortaa", sans-serif;
+}
+label {
+  cursor: pointer;
+}
+/* ======================= COMMON CSS RULES =========================== */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section__title {
+  font-size: 4rem;
+  text-align: center;
+  color: var(--primary-color-1);
+  position: relative;
+  padding: 7.9rem 0 0 0;
+  margin: 0 0 2rem 0;
+}
+.section__title::after {
+  position: absolute;
+  content: "";
+  width: 10rem;
+  border: 2px solid var(--primary-color-1);
+  border-radius: 1rem;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ======================= NAVIGATION BAR STYLING =========================== */
+nav {
+  background: var(--nav-color);
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+nav .logo a {
+  color: var(--primary-color-1);
+  font-size: 3rem;
+}
+nav .logo a .logo__bold__character {
+  font-size: 4rem;
+  font-weight: 700;
+}
+nav .menu ul li {
+  margin: 0 2rem;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+nav .menu ul li:hover {
+  transform: scale(1.15);
+}
+nav .menu ul li a {
+  color: white;
+  transition: 0.3s;
+}
+nav .menu ul li a:hover {
+  color: var(--primary-color-1);
+  font-weight: 700;
+}
+
+/* =======================  HEADER SECTION STYLING =========================== */
+.header {
+  background: var(--primary-color-1);
+  color: white;
+  font-size: 1.6rem;
+  min-height: calc(100vh - 6.4rem);
+  display: flex;
+  align-items: center;
+}
+.header > .container {
+  justify-content: space-around;
+  align-items: center;
+}
+.hero__text,
+.join__text {
+  /* flex: 1; */
+  width: 40%;
+}
+.hashtag {
+  color: var(--primary-color-2);
+  font-weight: 700;
+}
+.hash {
+  font-size: 15rem;
+}
+.hash__text {
+  font-size: 4rem;
+  position: absolute;
+}
+.hashtag__info p {
+  font-size: 2rem;
+  width: 100%;
+  text-align: justify;
+}
+.join__text::before {
+  content: "";
+  height: 30rem;
+  border: 2px solid var(--primary-color-2);
+  border-radius: 5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.join__text {
+  flex-direction: column;
+  position: relative;
+}
+.join__text span {
+  font-size: 5rem;
+}
+.join__text a,
+[type="submit"] {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color-1);
+  background: var(--primary-color-2);
+  padding: 1.2rem;
+  border: 0.2rem solid var(--primary-color-2);
+  transition: 0.3s;
+  margin: 1rem 0;
+}
+.join__text a:hover,
+[type="submit"]:hover {
+  color: var(--primary-color-2);
+  background: transparent;
+}
+
+/* =======================  TUTORIALS SECTION STYLING =========================== */
+
+.tutorials {
+  background: var(--primary-color-2);
+  min-height: calc(100vh - 6.4rem);
+}
+.tutorials .container {
+  justify-content: space-around;
+  min-height: calc(100vh - 6.4rem - 6.6rem);
+}
+.tutorial {
+  font-size: 3rem;
+  text-align: center;
+  width: 30%;
+  color: var(--primary-color-1);
+  border: 2px solid var(--primary-color-1);
+  padding: 5rem;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.tutorial:hover {
+  border: 5px solid var(--primary-color-1);
+  transform: scale(0.9);
+}
+
+/* =======================  CHEAT SHEETS SECTION STYLING =========================== */
+.cheat__sheets {
+  background: var(--primary-color-1);
+}
+.cheat__sheets .section__title {
+  color: var(--primary-color-2);
+}
+.cheat__sheets .section__title::after {
+  border-color: var(--primary-color-2);
+}
+.cheat__sheets {
+  background: var(--primary-color-1);
+  min-height: calc(100vh - 6.4rem);
+}
+.cheat__sheets .container {
+  justify-content: space-around;
+  min-height: calc(100vh - 6.9rem - 6.6rem);
+}
+.cheat__sheet {
+  font-size: 3rem;
+  text-align: center;
+  width: 30%;
+  color: var(--primary-color-2);
+  border: 2px solid var(--primary-color-2);
+  padding: 5rem;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cheat__sheet:hover {
+  border: 5px solid var(--primary-color-2);
+  transform: scale(0.9);
+}
+/* =======================  CHEAT SHEETS SECTION STYLING =========================== */
+.about {
+  background: var(--primary-color-2);
+  min-height: 100vh;
+}
+.about .section__title {
+  color: var(--primary-color-1);
+}
+.about .section__title::after {
+  border-color: var(--primary-color-1);
+}
+.about .text {
+  flex: 2;
+  font-size: 2rem;
+  text-align: justify;
+  padding: 0 5rem;
+}
+.about .img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.about .img img {
+  max-width: 25em;
+}
+/* =======================  CONTACT SECTION STYLING =========================== */
+.contact {
+  background: var(--primary-color-1);
+  min-height: calc(100vh - 6.4rem);
+}
+.contact .section__title {
+  color: var(--primary-color-2);
+}
+.contact .section__title::after {
+  border-color: var(--primary-color-2);
+}
+.contact .getintouch,
+.contact .form {
+  flex: 1;
+}
+.contact .getintouch,
+.contact .form {
+  padding: 2rem 5rem;
+}
+.contact .getintouch .text p {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5rem;
+}
+.contact .getintouch .text .title {
+  font-size: 3rem;
+  color: var(--primary-color-2);
+  font-weight: 700;
+}
+.contact .getintouch .text {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 30rem;
+}
+.contact .link__section ul {
+  justify-content: flex-start;
+  padding: 1rem 0;
+}
+.contact .link__section ul li {
+  margin-right: 7rem;
+  transition: 0.3s;
+}
+.contact .link__section ul li:hover {
+  transform: translateY(-1rem);
+}
+.contact .link__section ul li i {
+  font-size: 3rem;
+  color: var(--primary-color-2);
+}
+.contact .form .input__field {
+  padding: 1rem;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  margin: 1rem 0;
+  background: rgba(245, 245, 245, 0.815);
+  color: black;
+  font-family: comfortaa, sans-serif;
+}
+input {
+  width: 50%;
+}
+textarea {
+  width: 80%;
+  height: 15rem;
+}
+button {
+  font-family: comfortaa, sans-serif;
+  cursor: pointer;
+}
+[type="submit"] {
+  width: auto;
+  font-family: "comfortaa", sans-serif;
+  cursor: pointer;
+  font-size: 2rem;
+}
+/* =======================  FOOTER SECTION STYLING =========================== */
+.footer {
+  background: #000e2a;
+  padding: 1rem;
+  text-align: center;
+}
+.footer span {
+  color: white;
+  font-size: 1.4rem;
+}
+
+/* =======================  CUSTOM SCROLLBAR STYLING =========================== */
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+::-webkit-scrollbar-track {
+  background: rgb(36, 36, 37);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(153, 45%, 48%);
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(153, 45%, 58%);
+}
+
+/* =======================  RESPONSVE DESIGN =========================== */
+
+@media screen and (max-width: 1100px) {
+  :root {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 900px) {
+  :root {
+    font-size: 45%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .home .container {
+    flex-direction: column;
+    height: 80%;
+  }
+  /* .hero__text,
+  .join__text {
+     width: 100%; 
+  }
+  .hero__text {
+    align-self: flex-start;
+    padding: 0 0 0 4rem;
+  }
+  .join__text {
+    align-self: flex-end;
+  }
+  .join__text::before {
+    height: 100%;
+  }  */
+}
+@media screen and (max-width: 750px) {
+  .join__text::before {
+    display: none;
+  }
+  .hero__text,
+  .join__text {
+    width: 80%;
+    margin: 4rem;
+  }
+  .join__text.container {
+    align-items: flex-start;
+  }
+  .hero__text .hashtag__info p {
+    width: 70%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  nav .container,
+  .link__section .container {
+    flex-direction: row;
+  }
+  .contact .getintouch {
+    padding-bottom: 0;
+  }
+  .contact .getintouch .text.container {
+    display: block;
+  }
+  .getintouch,
+  .form {
+    width: 80%;
+  }
+  .tutorial,
+  .cheat__sheet {
+    width: 40%;
+  }
+  .about .text {
+    width: 70%;
+    margin: 5rem;
+  }
+  .about .img {
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* =======================  MOBILE MENU =========================== */
+  nav .menu ul {
+    display: block;
+    text-align: center;
+    position: fixed;
+    top: 6.4rem;
+    left: -120%;
+    background: var(--nav-color);
+    width: 100vw;
+    height: calc(100vh - 6.4rem);
+    transition: 0.5s ease;
+  }
+  nav .menu ul li a {
+    font-size: 3rem;
+    display: block;
+    padding: 4rem;
+  }
+  [type="checkbox"]:checked ~ ul {
+    left: 0;
+  }
+
+  .hero__text .hashtag__info p {
+    width: 100%;
+  }
+  .tutorial,
+  .cheat__sheet {
+    width: 50%;
+  }
+  .about .text {
+    width: 90%;
+  }
+  input {
+    width: 70%;
+  }
+  textarea {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .fa.fa-bars {
+    display: none;
+  }
+}
